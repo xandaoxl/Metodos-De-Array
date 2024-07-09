@@ -4,13 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exemplo de Manipulação de Arrays em JavaScript</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #resultado {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+</style>
 </head>
 <body>
-    <h1>Exemplo de Manipulação de Arrays em JavaScript</h1>
+    <div class="container">
+        <h1>Exemplo de Manipulação de Arrays em JavaScript</h1>
 
-    <button onclick="executarOperacoes()">Executar Operações</button>
+        <button onclick="executarOperacoes()">Executar Operações</button>
 
-    <div id="resultado"></div>
+        <div id="resultado"></div>
+    </div>
 
     <script>
         function executarOperacoes() {
@@ -55,17 +105,17 @@
             // Exibindo resultados na página
             let resultadoDiv = document.getElementById('resultado');
             resultadoDiv.innerHTML = `
-                <p>Array inicial: [${array.join(', ')}]</p>
-                <p>Array após map (multiplicado por 2): [${newArrayMap.join(', ')}]</p>
-                <p>Array filtrado (maior que 2): [${newArrayFilter.join(', ')}]</p>
-                <p>Soma dos elementos: ${sum}</p>
-                <p>Tem elemento negativo? ${hasNegative}</p>
-                <p>Todos são positivos? ${allPositive}</p>
-                <p>Primeiro elemento maior que 2: ${foundElement}</p>
-                <p>Índice do primeiro elemento maior que 2: ${foundIndex}</p>
-                <p>Array ordenado: [${sortedArray.join(', ')}]</p>
-                <p>Parte do array (índices 1 a 2): [${slicedArray.join(', ')}]</p>
-                <p>Array concatenado com [5, 6]: [${concatenatedArray.join(', ')}]</p>
+                <p><strong>Array inicial:</strong> [${array.join(', ')}]</p>
+                <p><strong>Array após map (multiplicado por 2):</strong> [${newArrayMap.join(', ')}]</p>
+                <p><strong>Array filtrado (maior que 2):</strong> [${newArrayFilter.join(', ')}]</p>
+                <p><strong>Soma dos elementos:</strong> ${sum}</p>
+                <p><strong>Tem elemento negativo?</strong> ${hasNegative}</p>
+                <p><strong>Todos são positivos?</strong> ${allPositive}</p>
+                <p><strong>Primeiro elemento maior que 2:</strong> ${foundElement}</p>
+                <p><strong>Índice do primeiro elemento maior que 2:</strong> ${foundIndex}</p>
+                <p><strong>Array ordenado:</strong> [${sortedArray.join(', ')}]</p>
+                <p><strong>Parte do array (índices 1 a 2):</strong> [${slicedArray.join(', ')}]</p>
+                <p><strong>Array concatenado com [5, 6]:</strong> [${concatenatedArray.join(', ')}]</p>
             `;
         }
     </script>
